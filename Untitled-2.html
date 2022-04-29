@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Proect</title>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+  function yes(){
+document.getElementById('x').innerHTML='15%';
+document.getElementById('x').style.width='15%';
+  }
+    </script>
+</head>
+<body onload="javascript:yes()">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Let's Save Environment</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      
+      <li class="nav-item">
+        <a class="nav-link" href="main.html">Sign Out</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Watch Tutorial</a>
+      </li>    
+    </ul>
+  </div>  
+
+</nav>
+
+
+
+<br>
+
+<h2>Your current Points:-</h2>
+<div class="progress">
+    
+    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" id="x"></div>
+  </div>
+  <br>
+<div>
+    <button class="sign" onclick="rewards()">Check Your Rewards</button>
+    <h1>Scan your QR code to earn Points</h1>
+    <br>
+    <img src="m.png" class="img-thumbnail mx-auto d-block" alt="Cinque Terre" width="140" height="200"> 
+
+    </div>
+
+<script> 
+
+  function rewards(){
+var rew = document.getElementById('x').innerHTML ='15%';
+    rew = rew.substring(0, rew.length - 1);
+    console.log(rew);// rew=100%
+if (rew>=100){
+  console.log("ee");
+  confirm("Yay! $25 Gift card \n        To claim press ok!");
+}
+
+else if (rew >= 50){
+   confirm("Yay! $20 Gift card\n To claim press ok!");}
+else if( rew >= 30){
+    confirm("Yay! $10 Gift card\n To claim press ok!");
+  }
+else{
+  alert("Gain more points to get rewards");
+}
+}
+  </script>
